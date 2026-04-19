@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEC Campus — Student Enrolment Portal</title>
+    <meta name="description"
+        content="CINEC Campus Student Enrolment Portal — apply for admission, browse courses, and manage your enrolment for the 2026–27 academic year.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-brand" onclick="goTo('home')">
+                <div class="nav-logo-wrap">
+                    <img src="images/logo.png" alt="CINEC Campus Logo" onerror="this.style.display='none'">
+                </div>
+                <div class="nav-title">
+                    <span>CINEC Campus</span>
+                    <span>Beyond A Graduate</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <button class="nav-link active" id="nav-home" onclick="goTo('home')">Home</button>
+                <button class="nav-link" id="nav-courses" onclick="goTo('courses')">Courses</button>
+                <button class="nav-link" id="nav-login" onclick="goTo('login')">Sign In</button>
+                <button class="nav-cta" onclick="goTo('register')">Enrol Now</button>
+            </div>
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <button class="nav-link" onclick="goTo('home');toggleMenu()">Home</button>
+            <button class="nav-link" onclick="goTo('courses');toggleMenu()">Courses</button>
+            <button class="nav-link" onclick="goTo('login');toggleMenu()">Sign In</button>
+            <button class="nav-cta" onclick="goTo('register');toggleMenu()">Enrol Now</button>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div class="page active" id="page-home">
+        <div class="hero">
+            <div style="position:relative;z-index:1">
+                <div class="hero-badge">2026 &ndash; 27 Enrolment Now Open</div>
+                <h1>Shape Your Future at<br><span>CINEC Campus</span></h1>
+                <p>Join thousands of students across 100+ programmes. World-class faculty, flexible study modes, and a
+                    career-focused curriculum &mdash; <em>Beyond A Graduate.</em></p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="goTo('register')">Apply for Admission</button>
+                    <button class="btn-outline" onclick="goTo('courses')">Browse Courses</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stats-inner">
+                <div class="stat"><span class="stat-num">12,000+</span><span class="stat-label">Enrolled Students</span>
+                </div>
+                <div class="stat"><span class="stat-num">100+</span><span class="stat-label">Programmes Offered</span>
+                </div>
+                <div class="stat"><span class="stat-num">95%</span><span class="stat-label">Graduate Employment</span>
+                </div>
+                <div class="stat"><span class="stat-num">25+</span><span class="stat-label">Years of Excellence</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="background:var(--white)">
+            <div class="section-inner">
+                <div class="divider"></div>
+                <div class="section-heading">Why Choose CINEC Campus?</div>
+                <p class="section-sub">Everything you need to succeed, built into your enrolment experience.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#0070b8" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                            </svg>
+                        </div>
+                        <h3>World-Class Faculty</h3>
+                        <p>Learn from award-winning professors and industry practitioners with decades of real-world
+                            experience.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#0070b8" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <path d="M8 21h8M12 17v4" />
+                            </svg>
+                        </div>
+                        <h3>Flexible Learning</h3>
+                        <p>Study on campus, online, or in a hybrid format. Your education should fit your life, not the
+                            other way around.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#0070b8" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3>Vibrant Community</h3>
+                        <p>Connect with a global network of alumni and a diverse campus community across many faculties
+                            and disciplines.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#0070b8" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                            </svg>
+                        </div>
+                        <h3>Career Outcomes</h3>
+                        <p>Our dedicated careers service and employer partnerships help 95% of graduates find meaningful
+                            employment within 6 months.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#0070b8" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 8v4l3 3" />
+                            </svg>
+                        </div>
+                        <h3>Streamlined Enrolment</h3>
+                        <p>Apply in minutes, get a response within 48 hours, and complete your course selection entirely
+                            online.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#0070b8" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <h3>Accredited Qualifications</h3>
+                        <p>All programmes are fully accredited and globally recognised, ensuring your degree holds value
+                            worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-band">
+            <h2>Ready to Begin Your Journey?</h2>
+            <p>Applications for the 2026&ndash;27 intake are now open. Spots are limited.</p>
+            <button class="btn-primary" onclick="goTo('register')">Create Your Account</button>
+        </div>
+
+        <footer>
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="CINEC" onerror="this.style.display='none'">
+                <span>CINEC Campus</span>
+            </div>
+            &copy; 2026&ndash;27 <span>CINEC Campus</span>. All rights reserved. &nbsp;|&nbsp;
+            <a href="#" onclick="showLegal('terms')" style="color:var(--gold-light);text-decoration:none">Terms &amp;
+                Conditions</a>
+            &nbsp;|&nbsp;
+            <a href="#" onclick="showLegal('privacy')" style="color:var(--gold-light);text-decoration:none">Privacy
+                Policy</a>
+        </footer>
+    </div>
+
+    <!-- REGISTER PAGE -->
+    <div class="page" id="page-register">
+        <div class="auth-wrap">
+            <div class="auth-card">
+                <div class="auth-logo">
+                    <div class="auth-logo-img">
+                        <img src="images/logo.png" alt="CINEC Campus Logo" onerror="this.style.display='none'">
+                    </div>
+                    <div class="auth-logo-text">
+                        <span>CINEC Campus</span>
+                        <span>Beyond A Graduate</span>
+                    </div>
+                </div>
+                <h2>Create Account</h2>
+                <p class="auth-sub">Start your 2026&ndash;27 enrolment journey. It only takes a minute.</p>
+                <div class="alert" id="reg-success"></div>
+                <div class="alert" id="reg-error"></div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-fname">First Name</label>
+                        <input type="text" id="reg-fname" placeholder="John">
+                        <div class="err-msg" id="err-fname">Please enter your first name.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-lname">Last Name</label>
+                        <input type="text" id="reg-lname" placeholder="Smith">
+                        <div class="err-msg" id="err-lname">Please enter your last name.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email Address</label>
+                    <input type="email" id="reg-email" placeholder="you@example.com">
+                    <div class="err-msg" id="err-email">Please enter a valid email address.</div>
+                </div>
+                <div class="form-group">
+                    <label for="reg-dob">Date of Birth</label>
+                    <input type="date" id="reg-dob">
+                    <div class="err-msg" id="err-dob">Please enter your date of birth.</div>
+                </div>
+                <div class="form-group">
+                    <label for="reg-faculty">Faculty of Interest</label>
+                    <select id="reg-faculty">
+                        <option value="">&#8212; Select a faculty &#8212;</option>
+                        <option>Business &amp; Management</option>
+                        <option>Engineering &amp; Technology</option>
+                        <option>Computing &amp; IT</option>
+                        <option>Nautical Studies &amp; Maritime</option>
+                        <option>Aviation</option>
+                        <option>Social Sciences &amp; Law</option>
+                    </select>
+                    <div class="err-msg" id="err-faculty">Please select a faculty.</div>
+                </div>
+                <div class="form-group">
+                    <label for="reg-pass">Password</label>
+                    <input type="password" id="reg-pass" placeholder="Minimum 8 characters">
+                    <div class="err-msg" id="err-pass">Password must be at least 8 characters.</div>
+                </div>
+                <div class="form-group">
+                    <label for="reg-pass2">Confirm Password</label>
+                    <input type="password" id="reg-pass2" placeholder="Repeat your password">
+                    <div class="err-msg" id="err-pass2">Passwords do not match.</div>
+                </div>
+
+                <button class="form-submit" onclick="handleRegister()">Create Account</button>
+                <p class="terms-note">By registering, you agree to CINEC Campus's
+                    <a onclick="showLegal('terms')">Terms &amp; Conditions</a> and
+                    <a onclick="showLegal('privacy')">Privacy Policy</a>.
+                </p>
+                <div class="auth-divider"><span>Already have an account?</span></div>
+                <p class="auth-switch"><a onclick="goTo('login')">Sign in to your portal &rarr;</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIN PAGE -->
+    <div class="page" id="page-login">
+        <div class="auth-wrap">
+            <div class="auth-card">
+                <div class="auth-logo">
+                    <div class="auth-logo-img">
+                        <img src="images/logo.png" alt="CINEC Campus Logo" onerror="this.style.display='none'">
+                    </div>
+                    <div class="auth-logo-text">
+                        <span>CINEC Campus</span>
+                        <span>Beyond A Graduate</span>
+                    </div>
+                </div>
+                <h2>Student Portal</h2>
+                <p class="auth-sub">Sign in to access your enrolment dashboard.</p>
+                <div class="alert" id="login-error"></div>
+
+                <div class="form-group">
+                    <label for="login-email">Student Email</label>
+                    <input type="email" id="login-email" placeholder="you@cinec.edu.lk">
+                    <div class="err-msg" id="err-login-email">Please enter your email address.</div>
+                </div>
+                <div class="form-group">
+                    <label for="login-pass">Password</label>
+                    <input type="password" id="login-pass" placeholder="Enter your password">
+                    <div class="err-msg" id="err-login-pass">Please enter your password.</div>
+                </div>
+                <div
+                    style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;margin-top:-6px">
+                    <label
+                        style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-muted);cursor:pointer">
+                        <input type="checkbox" style="width:auto"> Remember me
+                    </label>
+                    <button onclick="goTo('forgot')"
+                        style="font-size:13px;color:var(--navy-light);background:none;border:none;font-weight:600;cursor:pointer;font-family:'Source Sans 3',sans-serif;padding:0">
+                        Forgot password?
+                    </button>
+                </div>
+
+                <button class="form-submit" onclick="handleLogin()">Sign In</button>
+                <div class="auth-divider"><span>New to CINEC Campus?</span></div>
+                <p class="auth-switch"><a onclick="goTo('register')">Create a student account &rarr;</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORGOT PASSWORD PAGE -->
+    <div class="page" id="page-forgot">
+        <div class="auth-wrap">
+            <div class="auth-card" style="max-width:480px">
+                <button class="forgot-back" onclick="goTo('login')">&larr; Back to Sign In</button>
+                <div class="auth-logo">
+                    <div class="auth-logo-img">
+                        <img src="images/logo.png" alt="CINEC Campus Logo" onerror="this.style.display='none'">
+                    </div>
+                    <div class="auth-logo-text">
+                        <span>CINEC Campus</span>
+                        <span>Beyond A Graduate</span>
+                    </div>
+                </div>
+                <h2>Reset Password</h2>
+                <p class="auth-sub">Follow the steps to regain access to your account.</p>
+
+                <div class="step-indicator">
+                    <div class="step-dot active" id="sdot1">1</div>
+                    <div class="step-line" id="sline1"></div>
+                    <div class="step-dot" id="sdot2">2</div>
+                    <div class="step-line" id="sline2"></div>
+                    <div class="step-dot" id="sdot3">3</div>
+                </div>
+
+                <!-- Step 1 -->
+                <div id="fp-step1">
+                    <div class="alert" id="fp-error1"></div>
+                    <div class="form-group">
+                        <label for="fp-email">Registered Email Address</label>
+                        <input type="email" id="fp-email" placeholder="you@cinec.edu.lk">
+                        <div class="err-msg" id="err-fp-email">Please enter a valid email address.</div>
+                    </div>
+                    <button class="form-submit" onclick="fpStep1()">Send Reset Code</button>
+                    <p class="terms-note" style="margin-top:12px">A 6-digit verification code will be sent to your
+                        registered email address.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div id="fp-step2" style="display:none">
+                    <div class="alert info-box" id="fp-info2">A verification code has been sent. Please check your
+                        inbox.</div>
+                    <div class="alert" id="fp-error2"></div>
+                    <div class="form-group">
+                        <label for="fp-otp">6-Digit Verification Code</label>
+                        <input type="text" id="fp-otp" placeholder="e.g. 123456" maxlength="6"
+                            style="letter-spacing:0.2em;font-size:20px;text-align:center">
+                        <div class="err-msg" id="err-fp-otp">Please enter the 6-digit code sent to your email.</div>
+                    </div>
+                    <button class="form-submit" onclick="fpStep2()">Verify Code</button>
+                    <p style="text-align:center;margin-top:14px;font-size:13px;color:var(--text-muted)">
+                        Didn't receive a code?
+                        <button onclick="fpResend()"
+                            style="color:var(--navy-light);background:none;border:none;font-weight:600;cursor:pointer;font-size:13px;font-family:'Source Sans 3',sans-serif">Resend</button>
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div id="fp-step3" style="display:none">
+                    <div class="alert" id="fp-error3"></div>
+                    <div class="form-group">
+                        <label for="fp-newpass">New Password</label>
+                        <input type="password" id="fp-newpass" placeholder="Minimum 8 characters">
+                        <div class="err-msg" id="err-fp-newpass">Password must be at least 8 characters.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fp-newpass2">Confirm New Password</label>
+                        <input type="password" id="fp-newpass2" placeholder="Repeat your new password">
+                        <div class="err-msg" id="err-fp-newpass2">Passwords do not match.</div>
+                    </div>
+                    <button class="form-submit" onclick="fpStep3()">Update Password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COURSES PAGE -->
+    <div class="page" id="page-courses">
+        <div class="courses-wrap">
+            <div class="courses-header">
+                <h2>Course Catalogue &mdash; 2026&ndash;27</h2>
+                <p>Browse and enrol in courses for the 2026&ndash;27 academic year. Click &ldquo;Enrol&rdquo; to add a
+                    course to your selection.</p>
+            </div>
+
+            <div class="courses-toolbar">
+                <button class="filter-btn active" onclick="filterCourses('All', this)">All</button>
+                <button class="filter-btn" onclick="filterCourses('Business', this)">Business</button>
+                <button class="filter-btn" onclick="filterCourses('Engineering', this)">Engineering</button>
+                <button class="filter-btn" onclick="filterCourses('Computing', this)">Computing</button>
+                <button class="filter-btn" onclick="filterCourses('Maritime', this)">Maritime</button>
+                <button class="filter-btn" onclick="filterCourses('Aviation', this)">Aviation</button>
+                <div class="search-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.35-4.35" />
+                    </svg>
+                    <input type="text" id="course-search" placeholder="Search courses&hellip;"
+                        oninput="searchCourses()">
+                </div>
+            </div>
+
+            <div class="courses-grid" id="courses-grid"></div>
+            <div class="no-results" id="no-results">No courses match your search.</div>
+        </div>
+
+        <div class="enrolment-bar" id="enrolment-bar">
+            <p><strong id="enrol-count">0</strong> course<span id="plural-s"></span> selected &mdash; <strong
+                    id="enrol-credits">0</strong> credits total</p>
+            <button class="bar-btn" onclick="confirmEnrolment()">Confirm Enrolment</button>
+        </div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <div class="modal-icon">&#10003;</div>
+            <h3 id="modal-title">Enrolment Confirmed!</h3>
+            <p id="modal-body">Your course selection has been saved. You will receive a confirmation email within 24
+                hours.</p>
+            <button class="modal-close" onclick="closeModal('modal')">Continue to Portal</button>
+        </div>
+    </div>
+
+    <!-- LEGAL MODAL -->
+    <div class="modal-overlay" id="legal-modal">
+        <div class="modal legal-modal">
+            <h3 id="legal-title">Terms &amp; Conditions</h3>
+            <p class="legal-date">Effective: Academic Year 2026&ndash;27 &mdash; CINEC Campus</p>
+            <div id="legal-body"></div>
+            <div class="legal-close-wrap">
+                <button class="modal-close" onclick="closeModal('legal-modal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PASSWORD RESET SUCCESS MODAL -->
+    <div class="modal-overlay" id="fp-modal">
+        <div class="modal">
+            <div class="modal-icon" style="background:#e8f3fb;font-size:26px">&#128274;</div>
+            <h3>Password Updated</h3>
+            <p>Your password has been successfully updated. You can now sign in with your new credentials.</p>
+            <button class="modal-close" onclick="closeModal('fp-modal');goTo('login')">Go to Sign In</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
